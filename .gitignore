@@ -3,3 +3,19 @@ __pycache__/
 build/
 dist/
 *.egg-info/
+
+# Virtual Environment
+venv/
+*.pyc
+
+# Environment variables (contains credentials)
+.env
+.envrc
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

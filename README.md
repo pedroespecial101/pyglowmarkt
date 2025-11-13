@@ -11,9 +11,62 @@ https://github.com/danmed/Glow2MQTT
 
 ## Install
 
+### Quick Install
+
 ```
 pip3 install pyglowmarkt
 ```
+
+### Development Setup (Recommended)
+
+For development or local use, it's recommended to use a virtual environment:
+
+```bash
+# Clone the repository
+git clone https://github.com/cybermaggedon/pyglowmarkt.git
+cd pyglowmarkt
+
+# Option 1: Quick activation (creates venv if needed)
+source ./activate_venv.sh
+
+# Option 2: Manual setup
+python -m venv venv
+source venv/bin/activate  # On macOS/Linux
+# or
+venv\Scripts\activate  # On Windows
+
+# Install in editable mode
+pip install -e .
+```
+
+#### Automatic Virtual Environment Activation
+
+For automatic activation when entering the project directory:
+
+1. **Using direnv** (recommended):
+   ```bash
+   # Install direnv
+   brew install direnv  # macOS
+   # or: apt-get install direnv  # Linux
+   
+   # Add to your ~/.zshrc or ~/.bashrc
+   eval "$(direnv hook zsh)"  # for zsh
+   # or: eval "$(direnv hook bash)"  # for bash
+   
+   # Allow direnv for this project
+   cd pyglowmarkt
+   direnv allow
+   ```
+
+2. **Using the provided script**:
+   ```bash
+   source ./activate_venv.sh
+   ```
+
+The project includes:
+- `.envrc` - direnv configuration for automatic activation
+- `.python-version` - specifies Python 3.12.7
+- `activate_venv.sh` - manual activation script
 
 ## API example usage
 
